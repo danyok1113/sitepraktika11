@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Учебные материалы с 3D моделью</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f7fa;
+      color: #333;
+    }
+    header {
+      background: #005f73;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header h1 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 1.5em;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 10px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #94d2bd;
+    }
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .content-wrap {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: space-between;
+    }
+    .text-section {
+      flex: 1;
+      background: #fff;
+      padding: 25px 30px;
+      box-shadow: 0 4px 15px rgb(0 0 0 / 0.1);
+      border-radius: 8px;
+      min-width: 280px;
+    }
+    .text-section h2 {
+      margin-top: 0;
+      color: #0a9396;
+    }
+    .model-section {
+      flex: 1;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgb(0 0 0 / 0.1);
+      min-width: 280px;
+    }
+    model-viewer {
+      width: 100%;
+      height: 500px;
+      border-radius: 8px;
+      background: #e0f2f1;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #005f73;
+      color: #fff;
+      margin-top: 60px;
+      font-size: 0.9em;
+    }
+    section[id] {
+      scroll-margin-top: 80px;
+    }
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        margin-top: 10px;
+      }
+      model-viewer {
+        height: 300px;
+      }
+    }
+    a.email-button {
+      display: inline-block;
+      background: #219ebc;
+      color: white !important;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+    a.email-button:hover {
+      background: #0b7c91;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Учебные материалы</h1>
+    <nav>
+      <a href="#main">Главная</a>
+      <a href="#rewrite">Рерайты</a>
+      <a href="#books">Учебники</a>
+      <a href="#tools">Инструменты</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div class="content-wrap">
+      <section class="text-section">
+        <h2>Платформа для рерайта учебных материалов</h2>
+        <p>
+          Этот сайт создан как удобный ресурс для размещения переработанных (рерайтнутых) учебных материалов.
+        </p>
+        <p>
+          Здесь можно публиковать тексты в упрощённой или адаптированной форме — для школьников, студентов или преподавателей.
+        </p>
+        <p>
+          Рядом расположена 3D модель, которую можно вращать мышкой для лучшего восприятия.
+        </p>
+        <p>
+           Такой формат сочетает визуальность и функциональность, делая учебный процесс интереснее и доступнее.
+        </p>
+      </section>
+
+      <section class="model-section">
+        <model-viewer 
+          src="book.glb" 
+          alt="3D модель книги" 
+          auto-rotate 
+          camera-controls 
+          ar
+        ></model-viewer>
+      </section>
+    </div>
+
+    <section id="rewrite" class="text-section">
+      <h2>Рерайты</h2>
+      <p>Раздел для переработанных текстов: учебные статьи, краткие конспекты и полезные материалы.</p>
+
+      <h3>Примеры рерайтов:</h3>
+      <ul>
+        <li><a href="https://kazatel.su/books/c0a83801-893c-12d1-8189-3c708d9b16ed" target="_blank" rel="noopener">ГДЗ по русскому языку за 1 класс Климанова, Макеева ФГОС. Учебник Перспектива</a></li>
+        <li><a href="https://kazatel.su/books/c0a83801-893c-12d1-8189-3c7577f51fa6" target="_blank" rel="noopener">ГДЗ по русскому языку за 1 класс Соловейчик, Кузьменко ФГОС</a></li>
+        <li><a href="https://kazatel.su/books/91fe0408-1cbb-40de-a11b-b0b160182813" target="_blank" rel="noopener">ГДЗ Русский язык: 8-й класс: рабочая тетрадь</a></li>
+      </ul>
+
+      <h3>Отправляйте свой рерайт</h3>
+      <p>Если у вас есть готовый рерайт, вы можете отправить его нам на почту, и мы рассмотрим возможность добавить его на сайт.</p>
+      <a href="mailto:example@example.com?subject=Рерайт для сайта" class="email-button">
+        Отправить рерайт по почте
+      </a>
+    </section>
+
+    <!-- Добавленный раздел с инструкцией -->
+    <section id="instruction" class="text-section">
+      <h2>Инструкция по загрузке рерайта</h2>
+      <ol>
+        <li>Нажмите на кнопку <strong>«Отправить рерайт по почте»</strong> в разделе выше.</li>
+        <li>Укажите тему письма: <em>«Рерайт для сайта»</em>.</li>
+        <li>Прикрепите файл в формате <strong>.docx</strong>, <strong>.pdf</strong> или <strong>.txt</strong>.</li>
+        <li>В теле письма укажите:
+          <ul>
+            <li>Ваше имя или псевдоним (по желанию);</li>
+            <li>Название учебника или темы, к которой относится рерайт;</li>
+            <li>Класс или уровень (например, 4 класс, вуз и т. д.).</li>
+          </ul>
+        </li>
+        <li>После проверки модератором материал может быть добавлен на сайт.</li>
+      </ol>
+      <p><strong>Важно:</strong> Не публикуйте чужие материалы без изменений и не используйте тексты с нарушением авторских прав.</p>
+    </section>
+
+    <section id="books" class="text-section">
+      <h2>Учебники</h2>
+      <p>Ссылки учебников по основным дисциплинам. Подходит для визуального представления.</p>
+      <p><a href="https://lecta.ru/catalog/search/elektronnyi-uchebnik?sortBy=name" target="_blank" rel="noopener">Каталог электронных учебников на Lecta.ru</a></p>
+    </section>
+
+    <section id="tools" class="text-section">
+      <h2>Инструменты и ресурсы для рерайта</h2>
+      <ul>
+        <li><a href="https://docsummarizer.net/ru/ai/handwriting-recognition" target="_blank" rel="noopener">Распознавание текста — DocSummarizer</a></li>
+        <li><a href="https://maxtext.ru/rerait-teksta-онлайн" target="_blank" rel="noopener">Онлайн рерайт текста — MaxText.ru</a></li>
+        <li><a href="https://text.ru/spelling" target="_blank" rel="noopener">Проверка орфографии — Text.ru</a></li>
+      </ul>
+    </section>
+
+    <section id="contacts" class="text-section">
+      <h2>Контакты</h2>
+      <p>Если у вас есть предложения или материалы — свяжитесь с нами:</p>
+      <ul>
+        <li>Email: <a href="mailto:example@example.com">example@example.com</a></li>
+        <li>Telegram: <a href="https://t.me/example" target="_blank">@example</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Учебные материалы — рерайты и книги
+  </footer>
+
+</body>
+</html>
